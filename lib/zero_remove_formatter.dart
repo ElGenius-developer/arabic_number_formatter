@@ -6,8 +6,12 @@ class RemoveLeadingZeroFormatter extends TextInputFormatter {
       TextEditingValue oldValue, TextEditingValue newValue) {
     String newText = newValue.text;
 
-    // Remove leading zero digits (either Arabic or English)
-    newText = newText.replaceAll(RegExp(r'^[0٠]+'), '');
+   if(newText.length>1){
+
+  // Remove leading zero digits (either Arabic or English)
+  newText = newText.replaceAll(RegExp(r'^[0٠]+'), '');
+}
+
 
     return TextEditingValue(
       text: newText,
