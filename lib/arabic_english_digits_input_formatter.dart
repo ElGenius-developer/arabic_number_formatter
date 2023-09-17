@@ -1,6 +1,6 @@
 part of 'arabic_number_formatter.dart';
 
-class ArabicDigitsInputFormatter extends TextInputFormatter {
+class ArabicEnglishOnlyDigitsInputFormatter extends TextInputFormatter {
   @override
   TextEditingValue formatEditUpdate(
       TextEditingValue oldValue, TextEditingValue newValue) {

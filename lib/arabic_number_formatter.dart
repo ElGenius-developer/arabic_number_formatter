@@ -6,7 +6,7 @@ part 'src/numbers_map.dart';
 
 part 'src/language_enum.dart';
 part 'zero_remove_formatter.dart';
-part 'arabic_digits_input_formatter.dart';
+part 'arabic_english_digits_input_formatter.dart';
 
 class ArabicNumberTextInputFormatter extends TextInputFormatter {
   final bool isArabic;

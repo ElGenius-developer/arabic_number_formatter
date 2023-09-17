@@ -8,7 +8,7 @@ class RemoveLeadingZeroFormatter extends TextInputFormatter {
   ) {
     String newText = newValue.text;
     // Remove leading zeros from the input string
-    newText = newText.replaceAll(RegExp('^0+'), '');
+    newText = newText.replaceAll(RegExp(r'^[0٠]+'), '');
 
     return TextEditingValue(
       text: newText,
