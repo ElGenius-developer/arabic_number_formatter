@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
  part 'src/numbers_map.dart';
 
  part 'src/language_enum.dart';
-
+  part 'zero_remove_formatter.dart';
 
 
 class ArabicNumberTextInputFormatter extends TextInputFormatter {
