@@ -6,8 +6,8 @@ class ArabicDigitsInputFormatter extends TextInputFormatter {
       TextEditingValue oldValue, TextEditingValue newValue) {
     String filteredText = newValue.text;
 
-    // Filter out non-Arabic digits
-    filteredText = filteredText.replaceAll(RegExp(r'[^\u0660-\u0669]'), '');
+    // Filter out non-Arabic and non-English digits
+    filteredText = filteredText.replaceAll(RegExp(r'[^\u0660-\u06690-9]'), '');
 
     return TextEditingValue(
       text: filteredText,
