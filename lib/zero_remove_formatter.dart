@@ -13,7 +13,7 @@ class RemoveLeadingZeroFormatter extends TextInputFormatter {
 
     // Remove leading zeros from the input string
 
-    if (isArabic) {
+    if (!isArabic) {
       newText = newText.replaceAll(RegExp('^0+'), '');
     } else {
       newText = newText.replaceAll(RegExp('^٠+'), '');
