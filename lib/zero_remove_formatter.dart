@@ -6,17 +6,17 @@ class RemoveLeadingZeroFormatter extends TextInputFormatter {
   RemoveLeadingZeroFormatter({required this.isArabic});
   @override
   TextEditingValue formatEditUpdate(
-    TextEditingValue oldValue,
-    TextEditingValue newValue,
-  ) {
+      TextEditingValue oldValue, TextEditingValue newValue) {
     String newText = newValue.text;
 
-    // Remove leading zeros from the input string
+    if (newText.isNotEmpty) {
+      // Check if the first character is a zero digit (either Arabic or English)
+      bool isFirstCharZero = newText.startsWith('0') || newText.startsWith('٠');
 
-    if (!isArabic) {
-      newText = newText.replaceAll(RegExp('^0+'), '');
-    } else {
-      newText = newText.replaceAll(RegExp('^٠+'), '');
+      // Remove the leading zero digit if present
+      if (isFirstCharZero) {
+        newText = newText.substring(1);
+      }
     }
 
     return TextEditingValue(
