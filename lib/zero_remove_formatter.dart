@@ -1,9 +1,7 @@
 part of 'arabic_number_formatter.dart';
 
 class RemoveLeadingZeroFormatter extends TextInputFormatter {
-  final bool isArabic;
 
-  RemoveLeadingZeroFormatter({required this.isArabic});
   @override
   TextEditingValue formatEditUpdate(
       TextEditingValue oldValue, TextEditingValue newValue) {
