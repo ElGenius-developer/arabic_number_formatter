@@ -4,20 +4,10 @@ class RemoveLeadingZeroFormatter extends TextInputFormatter {
   @override
   TextEditingValue formatEditUpdate(
       TextEditingValue oldValue, TextEditingValue newValue) {
-    String newText = newValue.text;
-
-    try {
-      if (newText.length > 1) {
-        // Remove leading zero digits (either Arabic or English)
-        newText = newText.replaceAll(RegExp(r'^[0٠]+'), '');
-      }
-    } catch (error) {
-      log(error.toString());
+    if (newValue.text.isNotEmpty && (newValue.text.startsWith('0')|| newValue.text.startsWith('٠'))) {
+      // Prevent the input if it starts with '0'
+      return oldValue;
     }
-
-    return TextEditingValue(
-      text: newText,
-      selection: newValue.selection,
-    );
+    return newValue;
   }
 }
