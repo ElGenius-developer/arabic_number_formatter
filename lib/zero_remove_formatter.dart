@@ -6,11 +6,8 @@ class RemoveLeadingZeroFormatter extends TextInputFormatter {
       TextEditingValue oldValue, TextEditingValue newValue) {
     if (newValue.text.isNotEmpty && (newValue.text.startsWith('0')|| newValue.text.startsWith('٠'))) {
        final snackBar = SnackBar(
-              content: CustomText(
-                size: 17,
-                text: "Enter phone number without 0 ",
-                textOverflow: TextOverflow.visible,
-                color: Colors.white,
+              content: Text(
+               "Enter phone number without 0 ",
               ),
 
               // closeIconColor: textColor,
