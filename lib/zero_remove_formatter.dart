@@ -1,6 +1,8 @@
 part of 'arabic_number_formatter.dart';
 
 class RemoveLeadingZeroFormatter extends TextInputFormatter {
+  final BuildContext context ;
+  RemoveLeadingZeroFormatter(this.context);
   @override
   TextEditingValue formatEditUpdate(
       TextEditingValue oldValue, TextEditingValue newValue) {
