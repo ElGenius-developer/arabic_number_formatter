@@ -1,6 +1,7 @@
 library arabic_number_formatter;
 
- 
+ import 'package:flutter/material.dart';
+
 import 'dart:developer';
 
 import 'package:flutter/services.dart';
